@@ -26,7 +26,7 @@
             <HBox prefHeight="100.0" prefWidth="315.0">
                <children>
                   <Label text="Choose the language:" />
-                  <ComboBox fx:id="boxLanguage" onAction="#selectLanguage" prefWidth="150.0">
+                  <ComboBox fx:id="boxLanguage" prefWidth="150.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </HBox.margin>

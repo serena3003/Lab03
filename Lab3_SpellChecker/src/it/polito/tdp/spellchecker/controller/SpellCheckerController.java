@@ -12,6 +12,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class SpellCheckerController {
+	
+	private SpellCheckerModel model;
 
     @FXML
     private ResourceBundle resources;
@@ -50,13 +52,10 @@ public class SpellCheckerController {
 
     @FXML
     void spellCheck(ActionEvent event) {
-    	String text = txtInsert.getText();
-
-    }
-
-    @FXML
-    void selectLanguage(ActionEvent event) {
-    	String lang = boxLanguage.getValue();
+    		String lang = boxLanguage.getValue();
+    		String text = txtInsert.getText();
+    		boolean x = model.isCorrect(text, lang);
+    	
     }
     
     @FXML
@@ -68,11 +67,11 @@ public class SpellCheckerController {
         assert txtWrong != null : "fx:id=\"txtWrong\" was not injected: check your FXML file 'SpellChecker.fxml'.";
         assert txtMessage != null : "fx:id=\"txtMessage\" was not injected: check your FXML file 'SpellChecker.fxml'.";
         assert btnClear != null : "fx:id=\"btnClear\" was not injected: check your FXML file 'SpellChecker.fxml'.";
-        
-        boxLanguage.getItems().addAll("English", "Italiano");
+		boxLanguage.getItems().addAll("English", "Italiano");
     }
 
-	public void setmodel(SpellCheckerModel model) {
-		
+	public void setModel(SpellCheckerModel model) {
+		// boxLanguage.getValue();
+		this.model = model;
 	}
 }

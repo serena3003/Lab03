@@ -17,7 +17,7 @@ public class Main extends Application {
 			SpellCheckerController controller = loader.getController();
 			
 			SpellCheckerModel model = new SpellCheckerModel();
-			controller.setmodel(model);
+			controller.setModel(model);
 			
 			Scene scene = new Scene(root,600,500);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
