@@ -71,14 +71,14 @@
             </TextArea>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="txtMessage" editable="false">
+                  <TextField fx:id="txtMessage" editable="false" prefHeight="31.0" prefWidth="456.0">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
                   </TextField>
                   <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearText" text="Clear Text">
                      <HBox.margin>
-                        <Insets left="280.0" />
+                        <Insets left="2.0" />
                      </HBox.margin>
                   </Button>
                </children>
